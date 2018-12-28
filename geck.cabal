@@ -1,0 +1,58 @@
+name:                geck
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/MaciekFlis/geck
+license:             GPLv3
+license-file:        LICENSE
+author:              Maciej Flis
+maintainer:          maciek.flis@gmail.com
+copyright:           Maciej Flis
+category:            misc
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Core
+  ghc-options:         -Wredundant-constraints
+                       -Wincomplete-uni-patterns
+                       -fwarn-incomplete-patterns
+                       -Wincomplete-record-updates
+                       -Wcompat
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+executable projectGraph-console
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  ghc-options:         -threaded 
+                       -rtsopts 
+                       -with-rtsopts=-N 
+                       -Wredundant-constraints 
+                       -Wincomplete-uni-patterns
+                       -fwarn-incomplete-patterns
+                       -Wincomplete-record-updates
+                       -Wcompat
+  build-depends:       base
+  default-language:    Haskell2010
+  
+test-suite projectGraph-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  other-modules:       Core
+  build-depends:       base
+                     , hspec
+                     , QuickCheck
+  ghc-options:         -threaded 
+                       -rtsopts 
+                       -with-rtsopts=-N
+                       -Wredundant-constraints
+                       -Wincomplete-record-updates
+                       -Wcompat
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/MaciekFlis/geck

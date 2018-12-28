@@ -1,0 +1,52 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "stack build --fast",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "build file watch",
+      "type": "shell",
+      "command": "stack build --fast --file-watch"
+    },
+    {
+      "label": "build docs",
+      "type": "shell",
+      "command": "stack build --fast --haddock-deps"
+    },
+    {
+      "label": "generate hoogle db",
+      "type": "shell",
+      "command": "stack hoogle -- generate --local"
+    },
+    {
+      "label": "start hoogle server",
+      "type": "shell",
+      "command": "stack hoogle -- server --local --port=8080"
+    },
+    {
+      "label": "run tests",
+      "type": "shell",
+      "command": "stack test --fast",
+      "problemMatcher": []
+    },
+    {
+      "label": "run tests file watch",
+      "type": "shell",
+      "command": "stack test --fast --file-watch",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
