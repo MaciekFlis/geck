@@ -1,3 +1,5 @@
+import Arduino.Nano
+
 module Main where
 
-main = return ()
+main = putStrLn "Wello world"

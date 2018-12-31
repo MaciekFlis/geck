@@ -20,10 +20,11 @@ library
                        -fwarn-incomplete-patterns
                        -Wincomplete-record-updates
                        -Wcompat
-  build-depends:       base >= 4.7 && < 5
+  build-depends:       base >= 4.7,
+                       frp-arduino >= 0.1.1.0
   default-language:    Haskell2010
 
-executable projectGraph-console
+executable geck
   hs-source-dirs:      src
   main-is:             Main.hs
   ghc-options:         -threaded 
@@ -37,7 +38,7 @@ executable projectGraph-console
   build-depends:       base
   default-language:    Haskell2010
   
-test-suite projectGraph-test
+test-suite geck-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
