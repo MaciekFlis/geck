@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="Controllers/HealthController.fs" />
+    <Compile Include="Controllers/PlantsController.fs" />
     <Compile Include="Startup.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
