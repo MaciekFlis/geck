@@ -16,4 +16,7 @@ type PlantsController () =
 
   [<HttpGet>]
   member this.Get(id : int) = 
-    ActionResult<PlantStatus>( {Id = id; Humidity = 10.0m; Temperature = 18.0m} )
+    ActionResult<PlantStatus>( 
+      { Id = id; 
+        Humidity = 10.0m; 
+        Temperature = 18.0m} )
