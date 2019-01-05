@@ -1,5 +1,6 @@
-import Arduino.Nano
-
 module Main where
 
-main = putStrLn "Wello world"
+import Arduino.Nano
+
+main = compileProgram $ do
+    digitalOutput pin13 =: clock ~> toggle
