@@ -1,4 +1,4 @@
-namespace Api.Controllers
+module Health
 
 open Microsoft.AspNetCore.Mvc
 

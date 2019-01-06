@@ -1,4 +1,4 @@
-namespace Api.Controllers
+module Plants
 
 open Microsoft.AspNetCore.Mvc
 
