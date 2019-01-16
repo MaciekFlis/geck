@@ -47,6 +47,33 @@
         "isDefault": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "install",
+      "type": "shell",
+      "command": "stack install geck",
+      "group": "build"
+    },
+    {
+      "label": "run installed",
+      "type": "shell",
+      "command": "~/.local/bin/geck",
+      "dependsOn" : "install",
+      "group": "build"
+    },
+    { 
+      "label" : "upload",
+      "type": "shell",
+      "command" : "make main upload",
+      "dependsOn": "run installed",
+      "group": "build"
+    },
+    {
+      "label": "upload and cleanup",
+      "type": "shell",
+      "command" : "rm main.c && rm main && rm dag.dot && rm -r bin && rm -r build-uno",
+      "dependsOn" : "upload",
+      "group": "build"
     }
   ]
 }
