@@ -24,20 +24,20 @@ include /opt/mkArduino/Arduino.mk
 
 ### BOARD_TAG
 ### It must be set to the board you are currently using. (i.e uno, mega2560, etc.)
-BOARD_TAG         = nano
+BOARD_TAG         = nano328
 
 ### MONITOR_BAUDRATE
 ### It must be set to Serial baudrate value you are using.
-# MONITOR_BAUDRATE  = 115200
+AVRDUDE_ARD_BAUDRATE  = 57600
 
 ### AVR_TOOLS_DIR
 ### Path to the AVR tools directory such as avr-gcc, avr-g++, etc.
-AVR_TOOLS_DIR     = /usr
+AVR_TOOLS_DIR     = /home/maciek/Downloads/arduino-1.8.8-linux64/arduino-1.8.8/hardware/tools/avr
 
 ### AVRDUDE
 ### Path to avrdude directory.
-# AVRDUDE          = /usr/bin/avrdude
-
+AVRDUDE          = /home/maciek/Downloads/arduino-1.8.8-linux64/arduino-1.8.8/hardware/tools/avr/bin/avrdude
+AVRDUDE_CONF     = /home/maciek/Downloads/arduino-1.8.8-linux64/arduino-1.8.8/hardware/tools/avr/etc/avrdude.conf
 ### CFLAGS_STD
 ### Set the C standard to be used during compilation. Documentation (https://github.com/WeAreLeka/Arduino-Makefile/blob/std-flags/arduino-mk-vars.md#cflags_std)
 # CFLAGS_STD        = -std=gnu11
@@ -52,7 +52,7 @@ CXXFLAGS         += -pedantic -Wall -Wextra
 
 ### MONITOR_PORT
 ### The port your board is connected to. Using an '*' tries all the ports and finds the right one.
-MONITOR_PORT      = /dev/tty.usbmodem*
+MONITOR_PORT      = /dev/ttyUSB0
 
 ### CURRENT_DIR
 ### Do not touch - used for binaries path
