@@ -10,13 +10,12 @@
 
 ### ARDMK_DIR
 ### Path to the Arduino-Makefile directory.
-# ARDMK_DIR         = /opt/mkArduino
 
 ### ARDUINO_DIR
 ### Path to the Arduino application and resources directory.
 ### or on Linux: (remove the one you don't want)
 #ARDUINO_DIR       = /usr/share/arduino
-include /opt/mkArduino/Arduino.mk
+include /opt/arduino/Arduino.mk
 
 ### USER_LIB_PATH
 ### Path to where the your project's libraries are stored.
@@ -28,6 +27,7 @@ BOARD_TAG         = nano328
 
 ### MONITOR_BAUDRATE
 ### It must be set to Serial baudrate value you are using.
+
 AVRDUDE_ARD_BAUDRATE  = 57600
 
 ### AVR_TOOLS_DIR
