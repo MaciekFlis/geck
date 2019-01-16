@@ -32,12 +32,12 @@ AVRDUDE_ARD_BAUDRATE  = 57600
 
 ### AVR_TOOLS_DIR
 ### Path to the AVR tools directory such as avr-gcc, avr-g++, etc.
-AVR_TOOLS_DIR     = /home/maciek/Downloads/arduino-1.8.8-linux64/arduino-1.8.8/hardware/tools/avr
+AVR_TOOLS_DIR     = /usr
 
 ### AVRDUDE
 ### Path to avrdude directory.
-AVRDUDE          = /home/maciek/Downloads/arduino-1.8.8-linux64/arduino-1.8.8/hardware/tools/avr/bin/avrdude
-AVRDUDE_CONF     = /home/maciek/Downloads/arduino-1.8.8-linux64/arduino-1.8.8/hardware/tools/avr/etc/avrdude.conf
+AVRDUDE          = /usr/bin/avrdude
+AVRDUDE_CONF     = /etc/avrdude.conf
 ### CFLAGS_STD
 ### Set the C standard to be used during compilation. Documentation (https://github.com/WeAreLeka/Arduino-Makefile/blob/std-flags/arduino-mk-vars.md#cflags_std)
 # CFLAGS_STD        = -std=gnu11
