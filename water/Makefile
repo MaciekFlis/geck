@@ -28,6 +28,7 @@ BOARD_TAG         = nano328
 ### MONITOR_BAUDRATE
 ### It must be set to Serial baudrate value you are using.
 
+# Lower baudrate for arduino clone (equivalent of "Old Bootloader" setting in Arduino IDE)
 AVRDUDE_ARD_BAUDRATE  = 57600
 
 ### AVR_TOOLS_DIR
