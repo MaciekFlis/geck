@@ -52,28 +52,32 @@
       "label": "install",
       "type": "shell",
       "command": "stack install geck",
-      "group": "build"
+      "group": "build",
+      "problemMatcher": []
     },
     {
-      "label": "run installed",
+      "label": "run EDSL",
       "type": "shell",
       "command": "~/.local/bin/geck",
-      "dependsOn" : "install",
-      "group": "build"
+      "dependsOn": "install",
+      "group": "build",
+      "problemMatcher": []
     },
-    { 
-      "label" : "upload",
+    {
+      "label": "upload",
       "type": "shell",
-      "command" : "make main upload",
+      "command": "make main upload",
       "dependsOn": "run installed",
-      "group": "build"
+      "group": "build",
+      "problemMatcher": []
     },
     {
       "label": "upload and cleanup",
       "type": "shell",
-      "command" : "rm main.c && rm main && rm dag.dot && rm -r bin && rm -r build-uno",
-      "dependsOn" : "upload",
-      "group": "build"
+      "command": "rm main.c && rm main && rm dag.dot && rm -r bin && rm -r build-uno",
+      "dependsOn": "upload",
+      "group": "build",
+      "problemMatcher": []
     }
   ]
 }
